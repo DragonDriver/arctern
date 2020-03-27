@@ -28,6 +28,7 @@ def init():
     import os
     dirpath = os.path.split(os.path.realpath(__file__))[0]
     csvpath = dirpath + '/../../data/0_5M_nyc_taxi_and_building.csv'
+    csvpath = 'hdfs:///data/0_5M_nyc_taxi_and_building.csv'
     old_nyctaix_df = spark.INSTANCE.session.read.format("csv") \
         .option("header", True) \
         .option("delimiter", ",") \

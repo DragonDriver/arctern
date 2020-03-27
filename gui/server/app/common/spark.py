@@ -18,6 +18,14 @@ from pyspark.sql import SparkSession
 
 from app.common import config
 from arctern_pyspark import register_funcs
+import os
+x = '/home/ljq/ljq_hadoop_conf_dir/hadoop'
+os.environ['JAVA_HOME'] = '/usr/lib/jvm/java-8-openjdk-amd64'
+os.environ['HADOOP_CONF_DIR'] = x
+os.environ['YARN_CONF_DIR'] = x
+os.environ['PYSPARK_PYTHON'] = "/home/spark/miniconda3/envs/arctern/bin/python"
+os.environ['PYSPARK_DRIVER_PYTHON'] = "/home/ljq/miniconda3/envs/arctern/bin/python"
+
 
 
 class Spark:
@@ -26,9 +34,16 @@ class Spark:
     """
 
     def __init__(self):
+        try:
+            print("DDDDDDDDDDDDDD", os.environ['JAVA_HOME'])
+        except:
+            pass
+
         self.session = SparkSession.builder \
             .appName("Arctern") \
             .master(config.INSTANCE.get("spark", "master-addr")) \
+            .config("yarn.resourcemanager.address", config.INSTANCE.get("yarn", "resource-manager-address")) \
+            .config("spark.executorEnv.PROJ_LIB", "/home/spark/miniconda3/envs/arctern/share/proj") \
             .config("spark.executorEnv.PYSPARK_PYTHON",
                     config.INSTANCE.get("spark", "executor-python")
                     ) \
