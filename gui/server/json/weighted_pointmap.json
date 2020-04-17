@@ -1,16 +1,28 @@
 {
     "scope": "scope1",
     "session": "spark",
-    "sql": "select ST_Point(pickup_longitude, pickup_latitude) as point, tip_amount as c, fare_amount as s from nyc_taxi where ST_Within(ST_Point(pickup_longitude, pickup_latitude), ST_GeomFromText('POLYGON ((-73.998427 40.730309, -73.954348 40.730309, -73.954348 40.780816 ,-73.998427 40.780816, -73.998427 40.730309))'))",
-    "type": "weighted",
+    "sql": "SELECT ST_Point (pickup_longitude, pickup_latitude) AS point, total_amount AS color FROM nyc_taxi",
     "params": {
-        "width": 1024,
-        "height": 896,
-        "bounding_box": [-75.37976, 40.191296, -71.714099, 41.897445],
-        "color_gradient": ["#0000FF", "#FF0000"],
-        "color_bound": [0, 2],
-        "size_bound": [0, 10],
-        "opacity": 1.0,
-        "coordinate_system": "EPSG:4326"
+        "width": 512,
+        "height": 448,
+        "bounding_box": [
+            -73.9616334766551,
+            40.704739019597156,
+            -73.94232850242967,
+            40.728133570887906
+        ],
+        "opacity": 0.8,
+        "coordinate_system": "EPSG:4326",
+        "size_bound": [
+            10
+        ],
+        "color_bound": [
+            2.5,
+            20
+        ],
+        "color_gradient": [
+            "#115f9a",
+            "#d0f400"
+        ]
     }
 }

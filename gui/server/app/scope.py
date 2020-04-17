@@ -48,6 +48,8 @@ def remove_scope(scope_name):
 
     if scope_name not in _SCOPE:
         return jsonify(status="error", code=-1, message="scope {} not found!".format(scope_name))
+    stop_code = "spark.stop()\n"
+    exec(stop_code, _SCOPE[scope_name])
     del _SCOPE[scope_name]
     return jsonify(status="success", code=200, message="remove scope {} successfully!".format(scope_name))
 

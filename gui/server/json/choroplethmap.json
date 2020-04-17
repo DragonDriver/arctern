@@ -1,16 +1,26 @@
 {
     "scope": "scope1",
     "session": "spark",
-    "sql": "select ST_GeomFromText(buildingtext_dropoff) as wkt, passenger_count as w from nyc_taxi",
-    "type": "choropleth",
+    "sql": "SELECT ST_GeomFromText(buildingtext_dropoff) AS wkt, avg(tip_amount) AS w FROM nyc_taxi WHERE ((buildingtext_dropoff!='')) GROUP BY wkt",
     "params": {
-        "width": 1024,
-        "height": 896,
-        "bounding_box": [-75.37976, 40.191296, -71.714099, 41.897445],
+        "width": 512,
+        "height": 448,
+        "bounding_box": [
+            -74.00235068563725,
+            40.735104211264684,
+            -73.96739189659048,
+            40.77744332808598
+        ],
         "coordinate_system": "EPSG:4326",
-        "color_gradient": ["#0000FF", "#FF0000"],
-        "color_bound": [2.5, 5],
+        "color_gradient": [
+            "#115f9a",
+            "#d0f400"
+        ],
+        "color_bound": [
+            0,
+            5
+        ],
         "opacity": 1,
-        "aggregation_type": "sum"
+        "aggregation_type": "avg"
     }
 }
