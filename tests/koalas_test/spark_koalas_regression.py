@@ -29,48 +29,48 @@ EPOCH = 1e-8
 
 unary_func_property_dict = {
     # 'length':['length.csv', 'length.out','st_length.out'],  # issue 828
-    'envelope': ['envelope.csv', 'envelope.out', 'st_envelope.out'],  # empty error!
-    'area': ['area.csv', 'area.out', 'st_area.out'],
-    'npoints': ['npoints.csv', 'npoints.out', 'st_npoints.out'],
-    'is_valid': ['is_valid.csv', 'is_valid.out', 'st_is_valid.out'],
-    'centroid': ['centroid.csv', 'centroid.out', 'st_centroid.out'],  # empty error!
-    'convex_hull': ['convex_hull.csv', 'convex_hull.out', 'st_convex_hull.out'],
-    'exterior': ['exterior.csv', 'exterior.out', 'st_exterior.out'],  # empty error!
-    'boundary': ['boundary.csv', 'boundary.out', 'st_boundary.out'],  # e
-    'is_empty': ['is_empty.csv', 'is_empty.out', 'st_is_empty.out'],  # e
-    'is_simple': ['is_simple.csv', 'is_simple.out', 'st_is_simple.out'],  # e
+    # 'envelope': ['envelope.csv', 'envelope.out', 'st_envelope.out'],  # empty error!
+    # 'area': ['area.csv', 'area.out', 'st_area.out'],
+    # 'npoints': ['npoints.csv', 'npoints.out', 'st_npoints.out'],
+    # 'is_valid': ['is_valid.csv', 'is_valid.out', 'st_is_valid.out'],
+    # 'centroid': ['centroid.csv', 'centroid.out', 'st_centroid.out'],  # empty error!
+    # 'convex_hull': ['convex_hull.csv', 'convex_hull.out', 'st_convex_hull.out'],
+    # 'exterior': ['exterior.csv', 'exterior.out', 'st_exterior.out'],  # empty error!
+    # 'boundary': ['boundary.csv', 'boundary.out', 'st_boundary.out'],  # e
+    # 'is_empty': ['is_empty.csv', 'is_empty.out', 'st_is_empty.out'],  # e
+    # 'is_simple': ['is_simple.csv', 'is_simple.out', 'st_is_simple.out'],  # e
 }
 
 unary_func_dict = {
-    'envelope_aggr': ['envelope_aggr.csv', 'envelope_aggr.out', 'st_envelope_aggr.out', None],
-    'simplify': ['simplify.csv', 'simplify.out', 'st_simplify.out', [1]],
-    'buffer': ['buffer.csv', 'buffer.out', 'st_buffer.out', [1]],
-    'unary_union': ['unary_union.csv', 'unary_union.out', 'st_unary_union.out', None],
-    'as_geojson': ['as_geojson.csv', 'as_geojson.out', 'st_as_geojson.out', None],
-    'precision_reduce': ['precision_reduce.csv', 'precision_reduce.out', 'st_precision_reduce.out', [1]],
-    'translate': ['translate.csv', 'translate.out', 'st_translate.out', [2, 2]],
-    'affine': ['affine.csv', 'affine.out', 'st_affine.out', [1, 1, 1, 1, 1, 1]],
+    # 'envelope_aggr': ['envelope_aggr.csv', 'envelope_aggr.out', 'st_envelope_aggr.out', None],
+    # 'simplify': ['simplify.csv', 'simplify.out', 'st_simplify.out', [1]],
+    # 'buffer': ['buffer.csv', 'buffer.out', 'st_buffer.out', [1]],
+    # 'unary_union': ['unary_union.csv', 'unary_union.out', 'st_unary_union.out', None],
+    # 'as_geojson': ['as_geojson.csv', 'as_geojson.out', 'st_as_geojson.out', None],
+    # 'precision_reduce': ['precision_reduce.csv', 'precision_reduce.out', 'st_precision_reduce.out', [1]],
+    # 'translate': ['translate.csv', 'translate.out', 'st_translate.out', [2, 2]],
+    # 'affine': ['affine.csv', 'affine.out', 'st_affine.out', [1, 1, 1, 1, 1, 1]],
     # 'scale':['scale.csv','scale.out','st_scale.out',[1,2,(0 0)]],
     # 'rotate':['rotate.csv','rotate.out','st_rotate.out',[180,(0,0)]],
     # 'to_crs':['to_crs.csv','to_crs.out','st_to_crs.out',['\'EPSG:4326\'']],
-    'curve_to_line':['curve_to_line.csv','curve_to_line.out','st_curve_to_line.out',None]
+    # 'curve_to_line':['curve_to_line.csv','curve_to_line.out','st_curve_to_line.out',None]
 }
 
 binary_func_dict = {
-    'within': ['within.csv', 'within.out', 'st_within.out'],
-    'equals': ['equals.csv', 'equals.out', 'st_equals.out'],
-    'distance': ['distance.csv', 'distance.out', 'st_distance.out'],
-    'contains': ['contains.csv', 'contains.out', 'st_contains.out'],
-    'crosses': ['crosses.csv', 'crosses.out', 'st_crosses.out'],
-    'intersects': ['intersects.csv', 'intersects.out', 'st_intersects.out'],
-    'intersection': ['intersection.csv', 'intersection.out', 'st_intersection.out'],
+    # 'within': ['within.csv', 'within.out', 'st_within.out'],
+    # 'equals': ['equals.csv', 'equals.out', 'st_equals.out'],
+    # 'distance': ['distance.csv', 'distance.out', 'st_distance.out'],
+    # 'contains': ['contains.csv', 'contains.out', 'st_contains.out'],
+    # 'crosses': ['crosses.csv', 'crosses.out', 'st_crosses.out'],
+    # 'intersects': ['intersects.csv', 'intersects.out', 'st_intersects.out'],
+    # 'intersection': ['intersection.csv', 'intersection.out', 'st_intersection.out'],
     # 'symmetric_difference':['symmetric_difference.csv','symmetric_difference.out','st_symmetric_difference.out'],
     # 'hausdorff_distance':['hausdorff_distance.csv','hausdorff_distance.out','st_hausdorff_distance.out'],
     # 'distance_sphere':['distance_sphere.csv','distance_sphere.out','st_distance_sphere.out'] # e
     #
     # 'overlaps':['overlaps.csv','overlaps.out'],  # error
     # 'touches':['touches.csv','touches.out'],  # error
-    # 'union':['union.csv','union.out'],  # error
+    'union':['union.csv','union.out', 'st_union.out'],  # error
     # 'difference':['difference.csv','difference.out','st_difference.out'],
     # 'disjoint':['disjoint.csv','disjoint.out'],
 }
@@ -330,6 +330,7 @@ def test_binary_func1(func_name, input_csv, output_csv):
     col1, col2 = read_csv2arr(input_csv_path)
     assert len(col1) == len(col2)
     for i in range(0, len(col1)):
+        print("i: ", i, ", left: ", col1[i], ", right: ", col2[i])
         geo_s1 = GeoSeries(col1[i])
         geo_s2 = GeoSeries(col2[i])
         test_codes = 'geo_s1.' + func_name + '(geo_s2)'
@@ -389,7 +390,7 @@ def test_unary_func(func_name, input_csv, output_csv, params):
 if __name__ == "__main__":
     # test binary_func
     for key, values in binary_func_dict.items():
-        test_binary_func(key, values[0], values[1])
+        test_binary_func1(key, values[0], values[1])
     # test unary_func_property
     for key, values in unary_func_property_dict.items():
         test_unary_property_func(key, values[0], values[1])
